@@ -1,0 +1,25 @@
+<div class="panel">
+    
+    <input
+    class="form-control"
+    [(ngModel)]="name"
+    placeholder="Модель"
+    />
+    <input
+    type="number"
+    class="form-control"
+    [(ngModel)]="price"
+    placeholder="Цена"
+    />
+    <button class="btn btn-default" (click)="addItem(name, price)">
+    Добавить
+    </button>
+    <div class="main-container">
+        <div *ngFor='let item of items' style="display: flex;">
+            <p style="margin-right: 10px;">{{item.name}} </p>
+            <p style="margin-right: 10px;">{{item.price}}</p>
+            <button (click)='deleteItem(item.id)'>del</button>
+        </div>
+    </div>
+    
+  </div>

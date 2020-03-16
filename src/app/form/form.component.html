@@ -1,0 +1,20 @@
+<form [formGroup]='myForm' novalidate (ngSubmit)="submit()">
+    
+    <input formControlName="name" />
+
+
+    <input formControlName="email" />
+
+
+    <input formControlName="tel" />
+
+
+    <button
+    [disabled]="myForm.invalid"
+    >
+    Добавить
+    </button>
+
+</form>
+<div>Имя: {{ myForm.value.name }}</div>
+<div>Email: {{ myForm.value.email }}</div>

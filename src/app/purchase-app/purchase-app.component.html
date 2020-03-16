@@ -1,0 +1,6 @@
+<p style="margin: 0;" *while='condition' [bold]='"28px"'>{{age}}</p>
+<p *while='!condition'>я заглушка</p>
+<input type="number" [ngModel]="age" (ngModelChange)='onAgeChange($event)'/>
+<button (click)='increace()'>+</button>
+<button (click)='decreace()'>-</button>
+<button (click)='toggler()'>приколюха</button>
